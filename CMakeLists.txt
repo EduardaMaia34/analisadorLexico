@@ -6,6 +6,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(FLEX REQUIRED)
 
-FLEX_TARGET(TontoScanner tonto_lexer.l ${CMAKE_CURRENT_SOURCE_DIR}/lex.yy.cpp)
+FLEX_TARGET(TontoScanner rulesTonto.l ${CMAKE_CURRENT_SOURCE_DIR}/lex.yy.cpp)
 
-add_executable(tonto_lexer main.cpp ${FLEX_TontoScanner_OUTPUTS})
+add_executable(rulesTonto main.cpp ${FLEX_TontoScanner_OUTPUTS})

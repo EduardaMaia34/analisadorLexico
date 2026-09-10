@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/rulesTonto.dir/main.cpp.o CMakeFiles/rulesTonto.dir/lex.yy.cpp.o -o rulesTonto 

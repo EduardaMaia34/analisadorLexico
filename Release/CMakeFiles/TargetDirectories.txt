@@ -1,0 +1,3 @@
+/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Release/CMakeFiles/rulesTonto.dir
+/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Release/CMakeFiles/edit_cache.dir
+/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Release/CMakeFiles/rebuild_cache.dir

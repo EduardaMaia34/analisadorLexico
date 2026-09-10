@@ -1,0 +1,81 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "cmake debug",
+            "type": "shell",
+            "command": "cmake -B Debug -DCMAKE_BUILD_TYPE=Debug",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "make debug",
+            "type": "shell",
+            "command": "make -C Debug",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "dependsOn": "cmake debug"
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "echo 'Debug build concluída com sucesso!'",
+            "dependsOn": "make debug",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "cmake release",
+            "type": "shell",
+            "command": "cmake -B Release -DCMAKE_BUILD_TYPE=Release",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "make release",
+            "type": "shell",
+            "command": "make -C Release",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build",
+            "problemMatcher": ["$gcc"],
+            "dependsOn": "cmake release"
+        },
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "echo 'Release build concluída com sucesso!'",
+            "dependsOn": "make release",
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "label": "clean",
+            "type": "shell",
+            "command": "rm -rf Debug Release lex.yy.cpp",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ],
+    "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": true,
+        "panel": "shared"
+    }
+}
