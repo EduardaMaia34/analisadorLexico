@@ -57,3 +57,75 @@ void reportError(const std::string& lexeme, const std::string& suggestion) {
     errorsList.push_back({yylloc.first_line, yylloc.first_column, lexeme, suggestion});
 }
 %}
+
+%option noyywrap
+%option yylineno
+
+/* comentar */
+LINE_COMMENT       "//".*
+BLOCK_COMMENT      "/"([^]|\+[^/])\+"/"
+
+/* padroes especificos */
+CUSTOM_DATATYPE    [a-zA-Z]+"DataType"
+INSTANCE_NAME      [a-zA-Z][a-zA-Z_]*[0-9]+
+CLASS_NAME         [A-Z][a-zA-Z_]*
+RELATION_NAME      [a-z][a-zA-Z_]*
+
+%%
+
+[ \t]+             { }
+\r?\n              { current_col = 1; }
+{LINE_COMMENT}     { }
+{BLOCK_COMMENT}    {
+    for (int i = 0; yytext[i] != '\0'; ++i) {
+        if (yytext[i] == '\n') current_col = 1;
+    }
+}
+
+/* operadores compostos e simbolos */
+"<>--"              { addToken("COMP_AGG_LEFT"); }
+"--<>"              { addToken("COMP_AGG_RIGHT"); }
+".."                { addToken("RANGE"); }
+"{"                 { addToken("LBRACE"); }
+"}"                 { addToken("RBRACE"); }
+"("                 { addToken("LPAREN"); }
+")"                 { addToken("RPAREN"); }
+"["                 { addToken("LBRACKET"); }
+"]"                 { addToken("RBRACKET"); }
+"*"                 { addToken("STAR"); }
+"@"                 { addToken("AT"); }
+"."                 { addToken("DOT"); }
+","                 { addToken("COMMA"); }
+":"                 { addToken("COLON"); }
+
+    /*KEYWORD*/
+
+
+    /* CLASS_STEREOTYPE*/
+
+
+    /* RELATION STEREOTYPE*/
+
+
+    /*NATIVE TYPE*/
+
+    /* Meta-atributos */
+
+
+    /* Identificadores e Novos Tipos */
+
+/* tratamento de erros com sugestao */
+[0-9]+                 { 
+    reportError(yytext, "Numeros isolados nao sao permitidos sem identificador ou contexto de multiplicidade."); 
+}
+[0-9]+[a-zA-Z_]+       { 
+    reportError(yytext, "Identificadores nao podem comecar com digitos."); 
+}
+.                      { 
+    std::string s(yytext);
+    std::string tip = "Caractere desconhecido. Verifique espacamento, fechamento de operadores ou remova o simbolo.";
+    if (s == "\"" || s == "'") tip = "Strings literais entre aspas nao sao suportadas na sintaxe base de identificadores.";
+    reportError(s, tip); 
+}
+
+%%
