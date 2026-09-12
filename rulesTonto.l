@@ -98,8 +98,17 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 ","                 { addToken("COMMA"); }
 ":"                 { addToken("COLON"); }
 
-    /*KEYWORD*/
+/*palavras reservadas*/
 
+"genset"            {addToken("KEYWORD", "Palavras Reservadas");}
+"disjoint"            {addToken("KEYWORD", "Palavras Reservadas");}
+"complete"            {addToken("KEYWORD", "Palavras Reservadas");}
+"general"            {addToken("KEYWORD", "Palavras Reservadas");}
+"specifics"            {addToken("KEYWORD", "Palavras Reservadas");}
+"where"            {addToken("KEYWORD", "Palavras Reservadas");}
+"package"            {addToken("KEYWORD", "Palavras Reservadas");}
+"import"            {addToken("KEYWORD", "Palavras Reservadas");}
+"functional-complexes"            {addToken("KEYWORD", "Palavras Reservadas");}
 
     /* CLASS_STEREOTYPE*/
 
