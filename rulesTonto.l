@@ -110,8 +110,27 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "import"            {addToken("KEYWORD", "Palavras Reservadas");}
 "functional-complexes"            {addToken("KEYWORD", "Palavras Reservadas");}
 
-    /* CLASS_STEREOTYPE*/
+    /* esteriotipos de classes*/\
 
+"kind"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"phase"                { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"role"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"subkind"              { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"category"             { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"event"                { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"situation"            { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"process"              { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"mixin"                { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"phaseMixin"           { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"roleMixin"            { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"collective"           { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"quantity"             { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"intrisicMode"         { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"quality"              { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"historicalRole"       { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"historicalRoleMixin"  { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"mode"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
+"extrinsicMode"        { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 
     /* RELATION STEREOTYPE*/
 
