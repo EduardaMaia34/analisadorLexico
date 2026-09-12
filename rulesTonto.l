@@ -132,8 +132,33 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "mode"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 "extrinsicMode"        { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 
-    /* RELATION STEREOTYPE*/
+    /* esteriotipos de relacoes*/
 
+"aggregation"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"material"             { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"derivation"           { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"comparative"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"composition"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"inherence"            { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"constitution"         { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"mediation"            { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"characterization"     { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"subCollectionOf"      { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"subQualityOf"         { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"instantiation"        { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"externalDependence"   { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"componentOf"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"memberOf"             { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"termination"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"participational"      { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"participation"        { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"historicalDependence" { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"creation"             { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"manifestation"        { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"bringsAbout"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"triggers"             { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"value"                { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
+"formal"               { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 
     /*NATIVE TYPE*/
 
