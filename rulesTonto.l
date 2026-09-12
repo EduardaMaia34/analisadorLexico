@@ -160,7 +160,14 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "value"                { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 "formal"               { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 
-    /*NATIVE TYPE*/
+    /*tipos nativos*/
+
+"number"               { addToken("NATIVE_TYPE", "Tipos Nativos"); }
+"string"               { addToken("NATIVE_TYPE", "Tipos Nativos"); }
+"boolean"              { addToken("NATIVE_TYPE", "Tipos Nativos"); }
+"time"                 { addToken("NATIVE_TYPE", "Tipos Nativos"); }
+"date"                 { addToken("NATIVE_TYPE", "Tipos Nativos"); }
+"datetime"             { addToken("NATIVE_TYPE", "Tipos Nativos"); }
 
     /* Meta-atributos */
 
