@@ -1,4 +1,4 @@
-# Install script for directory: /home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico
+# Install script for directory: /home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

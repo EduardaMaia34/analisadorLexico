@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp" "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o" "gcc" "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o.d"
-  "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/main.cpp" "CMakeFiles/rulesTonto.dir/main.cpp.o" "gcc" "CMakeFiles/rulesTonto.dir/main.cpp.o.d"
+  "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp" "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o" "gcc" "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o.d"
+  "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/main.cpp" "CMakeFiles/rulesTonto.dir/main.cpp.o" "gcc" "CMakeFiles/rulesTonto.dir/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

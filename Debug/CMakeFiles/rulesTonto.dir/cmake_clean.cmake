@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp"
+  "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp"
   "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o"
   "CMakeFiles/rulesTonto.dir/lex.yy.cpp.o.d"
   "CMakeFiles/rulesTonto.dir/main.cpp.o"

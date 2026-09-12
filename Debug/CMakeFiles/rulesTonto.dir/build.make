@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico"
+CMAKE_SOURCE_DIR = "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug"
+CMAKE_BINARY_DIR = "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/rulesTonto.dir/depend.make
@@ -69,37 +69,37 @@ include CMakeFiles/rulesTonto.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/rulesTonto.dir/flags.make
 
-/home/gustavo/Área\ de\ trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp: /home/gustavo/Área\ de\ trabalho/compiladores/analisadorLexico/analisadorLexico/rulesTonto.l
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "[FLEX][TontoScanner] Building scanner with flex 2.6.4"
-	cd "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico" && /usr/bin/flex "-o/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp" rulesTonto.l
+/home/eduarda/Área\ de\ trabalho/UFERSA/P6/compiladores/ambiente\ de\ trabalho/analisadorLexico/lex.yy.cpp: /home/eduarda/Área\ de\ trabalho/UFERSA/P6/compiladores/ambiente\ de\ trabalho/analisadorLexico/rulesTonto.l
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir="/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "[FLEX][TontoScanner] Building scanner with flex 2.6.4"
+	cd "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico" && /usr/bin/flex "-o/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp" rulesTonto.l
 
 CMakeFiles/rulesTonto.dir/main.cpp.o: CMakeFiles/rulesTonto.dir/flags.make
-CMakeFiles/rulesTonto.dir/main.cpp.o: /home/gustavo/Área\ de\ trabalho/compiladores/analisadorLexico/analisadorLexico/main.cpp
+CMakeFiles/rulesTonto.dir/main.cpp.o: /home/eduarda/Área\ de\ trabalho/UFERSA/P6/compiladores/ambiente\ de\ trabalho/analisadorLexico/main.cpp
 CMakeFiles/rulesTonto.dir/main.cpp.o: CMakeFiles/rulesTonto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rulesTonto.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rulesTonto.dir/main.cpp.o -MF CMakeFiles/rulesTonto.dir/main.cpp.o.d -o CMakeFiles/rulesTonto.dir/main.cpp.o -c "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/rulesTonto.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rulesTonto.dir/main.cpp.o -MF CMakeFiles/rulesTonto.dir/main.cpp.o.d -o CMakeFiles/rulesTonto.dir/main.cpp.o -c "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/main.cpp"
 
 CMakeFiles/rulesTonto.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rulesTonto.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/main.cpp" > CMakeFiles/rulesTonto.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/main.cpp" > CMakeFiles/rulesTonto.dir/main.cpp.i
 
 CMakeFiles/rulesTonto.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rulesTonto.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/main.cpp" -o CMakeFiles/rulesTonto.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/main.cpp" -o CMakeFiles/rulesTonto.dir/main.cpp.s
 
 CMakeFiles/rulesTonto.dir/lex.yy.cpp.o: CMakeFiles/rulesTonto.dir/flags.make
-CMakeFiles/rulesTonto.dir/lex.yy.cpp.o: /home/gustavo/Área\ de\ trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp
+CMakeFiles/rulesTonto.dir/lex.yy.cpp.o: /home/eduarda/Área\ de\ trabalho/UFERSA/P6/compiladores/ambiente\ de\ trabalho/analisadorLexico/lex.yy.cpp
 CMakeFiles/rulesTonto.dir/lex.yy.cpp.o: CMakeFiles/rulesTonto.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rulesTonto.dir/lex.yy.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rulesTonto.dir/lex.yy.cpp.o -MF CMakeFiles/rulesTonto.dir/lex.yy.cpp.o.d -o CMakeFiles/rulesTonto.dir/lex.yy.cpp.o -c "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/rulesTonto.dir/lex.yy.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/rulesTonto.dir/lex.yy.cpp.o -MF CMakeFiles/rulesTonto.dir/lex.yy.cpp.o.d -o CMakeFiles/rulesTonto.dir/lex.yy.cpp.o -c "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp"
 
 CMakeFiles/rulesTonto.dir/lex.yy.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/rulesTonto.dir/lex.yy.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp" > CMakeFiles/rulesTonto.dir/lex.yy.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp" > CMakeFiles/rulesTonto.dir/lex.yy.cpp.i
 
 CMakeFiles/rulesTonto.dir/lex.yy.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/rulesTonto.dir/lex.yy.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp" -o CMakeFiles/rulesTonto.dir/lex.yy.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/lex.yy.cpp" -o CMakeFiles/rulesTonto.dir/lex.yy.cpp.s
 
 # Object files for target rulesTonto
 rulesTonto_OBJECTS = \
@@ -113,7 +113,7 @@ rulesTonto: CMakeFiles/rulesTonto.dir/main.cpp.o
 rulesTonto: CMakeFiles/rulesTonto.dir/lex.yy.cpp.o
 rulesTonto: CMakeFiles/rulesTonto.dir/build.make
 rulesTonto: CMakeFiles/rulesTonto.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rulesTonto"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable rulesTonto"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/rulesTonto.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -124,7 +124,7 @@ CMakeFiles/rulesTonto.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/rulesTonto.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/rulesTonto.dir/clean
 
-CMakeFiles/rulesTonto.dir/depend: /home/gustavo/Área\ de\ trabalho/compiladores/analisadorLexico/analisadorLexico/lex.yy.cpp
-	cd "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico" "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico" "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug" "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug" "/home/gustavo/Área de trabalho/compiladores/analisadorLexico/analisadorLexico/Debug/CMakeFiles/rulesTonto.dir/DependInfo.cmake" "--color=$(COLOR)"
+CMakeFiles/rulesTonto.dir/depend: /home/eduarda/Área\ de\ trabalho/UFERSA/P6/compiladores/ambiente\ de\ trabalho/analisadorLexico/lex.yy.cpp
+	cd "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico" "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico" "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug" "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug" "/home/eduarda/Área de trabalho/UFERSA/P6/compiladores/ambiente de trabalho/analisadorLexico/Debug/CMakeFiles/rulesTonto.dir/DependInfo.cmake" "--color=$(COLOR)"
 .PHONY : CMakeFiles/rulesTonto.dir/depend
 

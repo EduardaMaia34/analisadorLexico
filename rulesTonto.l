@@ -110,7 +110,7 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "import"            {addToken("KEYWORD", "Palavras Reservadas");}
 "functional-complexes"            {addToken("KEYWORD", "Palavras Reservadas");}
 
-    /* esteriotipos de classes*/\
+    /* esteriotipos de classes*/
 
 "kind"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 "phase"                { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
