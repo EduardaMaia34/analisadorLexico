@@ -61,11 +61,11 @@ void reportError(const std::string& lexeme, const std::string& suggestion) {
 %option noyywrap
 %option yylineno
 
-/* comentar */
+/* comentarios */
 LINE_COMMENT       "//".*
-BLOCK_COMMENT      "/"([^]|\+[^/])\+"/"
+BLOCK_COMMENT      "/*"([^*]|\*+[^*/])*\*+"/"
 
-/* padroes especificos */
+/* padroes */
 CUSTOM_DATATYPE    [a-zA-Z]+"DataType"
 INSTANCE_NAME      [a-zA-Z][a-zA-Z_]*[0-9]+
 CLASS_NAME         [A-Z][a-zA-Z_]*
@@ -82,7 +82,7 @@ RELATION_NAME      [a-z][a-zA-Z_]*
     }
 }
 
-/* operadores compostos e simbolos */
+    /* operadores compostos e simbolos */
 "<>--"              { addToken("COMP_AGG_LEFT"); }
 "--<>"              { addToken("COMP_AGG_RIGHT"); }
 ".."                { addToken("RANGE"); }
@@ -98,20 +98,18 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 ","                 { addToken("COMMA"); }
 ":"                 { addToken("COLON"); }
 
-/*palavras reservadas*/
+    /* palavras reservadas */
+"genset"               { addToken("KEYWORD", "Palavras Reservadas"); }
+"disjoint"             { addToken("KEYWORD", "Palavras Reservadas"); }
+"complete"             { addToken("KEYWORD", "Palavras Reservadas"); }
+"general"              { addToken("KEYWORD", "Palavras Reservadas"); }
+"specifics"            { addToken("KEYWORD", "Palavras Reservadas"); }
+"where"                { addToken("KEYWORD", "Palavras Reservadas"); }
+"package"              { addToken("KEYWORD", "Palavras Reservadas"); }
+"import"               { addToken("KEYWORD", "Palavras Reservadas"); }
+"functional-complexes" { addToken("KEYWORD", "Palavras Reservadas"); }
 
-"genset"            {addToken("KEYWORD", "Palavras Reservadas");}
-"disjoint"            {addToken("KEYWORD", "Palavras Reservadas");}
-"complete"            {addToken("KEYWORD", "Palavras Reservadas");}
-"general"            {addToken("KEYWORD", "Palavras Reservadas");}
-"specifics"            {addToken("KEYWORD", "Palavras Reservadas");}
-"where"            {addToken("KEYWORD", "Palavras Reservadas");}
-"package"            {addToken("KEYWORD", "Palavras Reservadas");}
-"import"            {addToken("KEYWORD", "Palavras Reservadas");}
-"functional-complexes"            {addToken("KEYWORD", "Palavras Reservadas");}
-
-    /* esteriotipos de classes*/
-
+    /* estereotipos da classe */
 "kind"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 "phase"                { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 "role"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
@@ -132,8 +130,7 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "mode"                 { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 "extrinsicMode"        { addToken("CLASS_STEREO", "Estereotipos de Classe"); }
 
-    /* esteriotipos de relacoes*/
-
+    /* estereótipos de relação */
 "aggregation"          { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 "material"             { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 "derivation"           { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
@@ -160,8 +157,7 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "value"                { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 "formal"               { addToken("RELATION_STEREO", "Estereotipos de Relacao"); }
 
-    /*tipos nativos*/
-
+    /* tipos nativos */
 "number"               { addToken("NATIVE_TYPE", "Tipos Nativos"); }
 "string"               { addToken("NATIVE_TYPE", "Tipos Nativos"); }
 "boolean"              { addToken("NATIVE_TYPE", "Tipos Nativos"); }
@@ -169,12 +165,20 @@ RELATION_NAME      [a-z][a-zA-Z_]*
 "date"                 { addToken("NATIVE_TYPE", "Tipos Nativos"); }
 "datetime"             { addToken("NATIVE_TYPE", "Tipos Nativos"); }
 
-    /* Meta-atributos */
+    /* meta atributos */
+"ordered"              { addToken("META_ATTR", "Meta-atributos"); }
+"const"                { addToken("META_ATTR", "Meta-atributos"); }
+"derived"              { addToken("META_ATTR", "Meta-atributos"); }
+"subsets"              { addToken("META_ATTR", "Meta-atributos"); }
+"redefines"            { addToken("META_ATTR", "Meta-atributos"); }
 
+    /* identificadores e novos tipos */
+{CUSTOM_DATATYPE}      { addToken("CUSTOM_DATATYPE", "Novos Tipos (DataTypes)"); }
+{INSTANCE_NAME}        { addToken("INSTANCE_NAME", "Instancias"); }
+{CLASS_NAME}           { addToken("CLASS_NAME", "Classes"); }
+{RELATION_NAME}        { addToken("RELATION_NAME", "Relacoes"); }
 
-    /* Identificadores e Novos Tipos */
-
-/* tratamento de erros com sugestao */
+    /* tratamento com sugestoes */
 [0-9]+                 { 
     reportError(yytext, "Numeros isolados nao sao permitidos sem identificador ou contexto de multiplicidade."); 
 }

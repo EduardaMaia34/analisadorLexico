@@ -5,7 +5,7 @@
             "name": "Executar/Depurar Tonto Lexer",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/tonto_lexer",
+            "program": "${workspaceFolder}/rulesTonto",
             "args": ["testes/Universidade.tonto"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
