@@ -110,7 +110,8 @@ Os elementos léxicos reconhecidos seguem as regras de formação da especifica�
 Para instalar as dependências no Linux (Ubuntu / Debian / Mint):
 ```bash
 sudo apt update
-sudo apt install -y g++ flex cmake make```
+sudo apt install -y g++ flex cmake make
+```
 
 ## 💻 Exemplos
 
