@@ -103,15 +103,75 @@ Os elementos léxicos reconhecidos seguem as regras de formação da especifica�
 ## 🚀 Como Usar
 
 ### Pré-requisitos
-- Compilador **C++ (g++ com suporte a C++17)**
-- **Flex** (Fast Lexical Analyzer)
-- **CMake 3.10+** e **Make**
 
-Para instalar as dependências no Linux (Ubuntu / Debian / Mint):
+No ambiente Linux (Debian, Ubuntu ou Mint), instale os pacotes de compilação e o Flex:
+
 ```bash
 sudo apt update
-sudo apt install -y g++ flex cmake make
+sudo apt install -y g++ flex cmake make gdb
 ```
+
+### Instalação
+
+1. Clone o repositório ou baixe o código-fonte:
+```bash
+git clone [https://github.com/EduardaMaia34/analisadorLexico.git](https://github.com/EduardaMaia34/analisadorLexico.git)
+```
+
+2. Acesse o diretório do projeto:
+```bash
+cd analisadorLexico
+```
+
+### Execução pelo VS Code (Tasks e Launch)
+
+O projeto possui automação completa configurada em `.vscode/tasks.json` e `.vscode/launch.json`.
+
+#### 1. Como Compilar via Tasks
+* **Compilação padrão direta**: Pressione o atalho **`Ctrl + Shift + B`**. O VS Code acionará a tarefa padrão `Build Debug` (executando `cmake debug` e `make debug` em cadeia).
+* **Executar tasks específicas via menu**:
+  1. Pressione **`Ctrl + Shift + P`** (ou abra o menu **Terminal > Executar Tarefa...**).
+  2. Selecione **`Tasks: Run Task`** (ou **`Executar Tarefa`**).
+  3. Escolha a ação desejada:
+     * **`make debug`** (ou **`Build Debug`**): constrói o binário na pasta `Debug` com suporte a depuração.
+     * **`make release`** (ou **`Build Release`**): gera o binário otimizado na pasta `Release`.
+     * **`clean`**: limpa os diretórios de compilação e o arquivo intermediário `lex.yy.cpp`.
+
+#### 2. Como Rodar e Depurar
+* Pressione **`F5`** (ou abra a aba lateral **Executar e Depurar** e clique no ícone de Play verde em **Executar/Depurar Tonto Lexer**).
+* O projeto compilará as alterações pendentes e executará a análise léxica passando o arquivo `testes/Universidade.tonto` como parâmetro.
+* A saída completa será exibida no **Terminal Integrado** ou no **Console de Depuração**.
+
+### Compilação e Execução Manual via Terminal
+
+Caso prefira operar via linha de comando no shell:
+
+#### 1. Compilação
+Na raiz da pasta `analisadorLexico`, execute:
+```bash
+# Configura o CMake no diretório Debug
+cmake -B Debug -DCMAKE_BUILD_TYPE=Debug
+
+# Compila o executável rulesTonto
+make -C Debug
+```
+
+#### 2. Execução
+Execute o binário gerado informando o caminho do arquivo `.tonto`:
+```bash
+# Executando sobre o arquivo de teste padrão
+./Debug/rulesTonto testes/Universidade.tonto
+
+# Executando sobre qualquer outro arquivo .tonto
+./Debug/rulesTonto caminho/para/seu_arquivo.tonto
+```
+
+Para redirecionar e salvar o relatório diretamente em um arquivo de texto:
+```bash
+./Debug/rulesTonto testes/Universidade.tonto > saida.txt
+```
+
+---
 
 ## 💻 Exemplos
 
