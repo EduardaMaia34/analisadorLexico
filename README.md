@@ -14,9 +14,6 @@ Este projeto implementa um analisador léxico para a linguagem TONTO, utilizando
 - [Especificação dos Tokens](#-especificação-dos-tokens)
 - [Como Usar](#-como-usar)
 - [Exemplos](#-exemplos)
-- [Autores](#-autores)
-- [Licença](#-licença)
-
 ---
 
 ## 🧩 A Linguagem TONTO
@@ -74,6 +71,7 @@ analisadorLexico/
 ├── .gitignore                # Arquivos e diretórios ignorados no controle de versão
 ├── LICENSE                   # Licença de uso do código
 └── README.md                 # Documentação principal do projeto
+```
 
 ## ✨ Funcionalidades
 
@@ -112,4 +110,53 @@ Os elementos léxicos reconhecidos seguem as regras de formação da especifica�
 Para instalar as dependências no Linux (Ubuntu / Debian / Mint):
 ```bash
 sudo apt update
-sudo apt install -y g++ flex cmake make
+sudo apt install -y g++ flex cmake make```
+
+## 💻 Exemplos
+
+### Arquivo de Entrada (`testes/Universidade.tonto`)
+
+```text
+package UniversidadeModel {
+
+    // Novos tipos de dados
+    CPFDataType
+    MatriculaDataType
+
+    // Estereótipos de Classe e Atributos
+    kind Person {
+        cpf: CPFDataType
+        birthDate: date
+        name: string
+    }
+
+    subkind Student
+    subkind Professor
+
+    phase UndergraduateStudent
+    phase GraduateStudent
+
+    // Generalização
+    genset StudentPhases {
+        general Student
+        specifics UndergraduateStudent, GraduateStudent
+        disjoint
+        complete
+    }
+
+    // Estereótipos de Relação e Meta-atributos
+    material enrolledIn [1..*] (Student) <>-- (UndergraduateStudent) {
+        ordered
+        derived
+    }
+
+    mediation teaches [1..*] (Professor) --<> (Student)
+
+    // Instâncias
+    Aluno01
+    Docente2026
+
+    // Erros intencionais para teste de diagnóstico
+    123Invalido
+    $
+}
